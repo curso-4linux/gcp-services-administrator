@@ -1,0 +1,21 @@
+{
+    "spec": {
+        "template": {
+            "spec": {
+                "containers": [{
+                    "name": "4linux-python-sha256-1",
+                    "volumeMounts": [{
+                        "mountPath": "/app",
+                        "name": "python-volume"
+                    }]
+                }],
+                "volumes": [{
+                    "name": "python-volume",
+                    "persistentVolumeClaim": {
+                        "claimName": "volume-claim-python-nfs"
+                    }
+                }]
+            }
+        }
+    }
+}              
